@@ -19,8 +19,8 @@
 
 
 #Problem3: 
-#Use the same name variable as before. Add some whitespace characters at the
-#beginning and end of the name (use each of the commands \t and \n at least once).
+#Use the same name variable as Problems 1 and 2. Add some whitespace characters at 
+#the beginning and end of the name (use each of the commands \t and \n at least once).
 #Print the name three times using the functions lstrip(), rstrip(), and strip(),
 #respectively. 
 
