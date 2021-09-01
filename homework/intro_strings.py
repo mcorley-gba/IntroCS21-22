@@ -2,7 +2,7 @@
 #at the start each problem. When you have finished, re-save this script as 
 #[yourname]_intro_strings.py and upload to Google Classroom in the assignment.
 
-#Problem 1: 
+#Problem 1:
 #Store a person's name in a variable. Print a simple message to that person.
 #Example: Hello, Joe. Nice weather today.
 
