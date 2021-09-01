@@ -10,7 +10,7 @@
 
 
 #Problem 2:
-#Use the same name variable as Problem 1. Print the person's name in 
+#Use the same name variable as in Problem 1. Print the person's name in 
 #uppercase, lowercase, and title case. Use the appropriate command for each,
 #regardless of how you have the name entered.
 #Example: JOE, joe, and Joe
