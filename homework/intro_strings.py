@@ -1,5 +1,5 @@
 #Write Code for each problem below. Start your code for each problem below the comment
-#at the start each problem. When you have finished, re-save this script as 
+#at the start each problem. When you have finished, ensure this script is saved as 
 #[yourname]_intro_strings.py and upload to Google Classroom in the assignment.
 
 #Problem 1:
