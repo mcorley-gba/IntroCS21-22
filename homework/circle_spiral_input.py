@@ -11,7 +11,7 @@ sides = int(turtle.Screen().numinput("Number of sides", "How many sides do you w
 
 for x in range(360):
     t.pencolor(colors[x%sides])
-    t.circle(x*3/sides + x)
+    t.forward(x*3/sides + x)
     t.left(360/sides + 1)
     t.width(x*sides/200)
 
