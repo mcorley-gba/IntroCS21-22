@@ -1,4 +1,4 @@
-#This is Part 2 of test1. Below there are two programming problems
+#This is Part 2 of test1. Below, there are two programming problems
 #   Program original code for each problem. You may use your notes, but
 #   you may not use the internet or your neighbor.
 
@@ -26,4 +26,19 @@
 #   operations: Addition, Subtraction, Multiplication, Division,
 #   Integer Division, and Exponentiation. Print each 
 #   arithmetic problem.
+#Write your code below.
+
+
+
+
+
+
+
+
+
+#BONUS:
+#   Use a for loop to sum all of the positive integers from one
+#   to one thousand. Print the final sum to the screen. Do not print 
+#   any intermediate sums. To help, the sum of the first one thousand
+#   positive integer is 500500.
 #Write your code below.
