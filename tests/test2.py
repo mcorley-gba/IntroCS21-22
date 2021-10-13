@@ -36,6 +36,8 @@ CODE_HERE
 
 
 #Fourth, sort the name list in alphabetical order. 
+#You do not have to print the sorted list,
+#only sort it.
 #Your code goes here:
 CODE_HERE
 
@@ -56,10 +58,10 @@ CODE_HERE
 #list. Also tell the user the minimum and maximum grade.
 #Complete the code below:
 print('There are ', CODE_HERE, ' names \
-    \n and ', CODE_HERE, ' grades.')
+\n and ', CODE_HERE, ' grades.')
 
 print('The maximum grade is ', CODE_HERE, ', \
-    \n and the minimum grade is ', CODE_HERE, '.')
+\n and the minimum grade is ', CODE_HERE, '.')
 
 
 
