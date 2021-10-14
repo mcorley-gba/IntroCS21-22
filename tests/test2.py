@@ -1,100 +1,48 @@
 #INTRODUCTION to COMPUTER SCIENCE
 #TEST 2: LISTS AND 'FOR' LOOPS
 
-#All of the problems below are connected. 
-#Work through each one and test your code to make sure it is producing
-#the correct output.
+#1. Define a list with ten names in it. 
 
-#You will be writing a program that will build a grade-book for a test
-#given by a teacher. You will be making two lists: a list of names,
-#and a list of grades. Then, using 'for' loops and slices, you will
-#calculate averages for the tests. 
 
-#I will test your code on a set of ten student names in the form
-#LAST_FIRST.
-
-#First, create two empty lists: one for student names, and one
-#for grades. 
-#Your code goes here:
-CODE_HERE
+#2. Create a 'for' loop that will loop through each name in your list
+#   Each iteration should print a message saying that the person 
+#   is a good student.
+#   Example output: Joe is a good student. 
 
 
 
-#Second, ask the user how many student grades need to be recorded. 
-#Your code goes here:
-CODE_HERE
+#3. In your list of names, do the following:
+#   a. Delete the name at index 2
+#   b. Insert a new name at index 5
+#   c. Append a new name to the list. 
+#   d. Sort your list in alphabetical order.
+#   e. Print your modified, sorted list.
 
 
+#4. MULTIPLE CHOICE: Un-Comment the line of code below that will 
+#   create a list of numbers from 1 to 20:
+#numbers = range(1,21)          #OPTION A
+#numbers = list(1,20)           #OPTION B
+#numbers = int(1,20)            #OPTION C
+#numbers = list(range(1,21))    #OPTION D
 
 
-#Third, create a 'for' loop that loops for the number of students
-#given in part (2). For each iteration of the loop, you should
-#ask for a student's name and append that name to your name list. 
-#Your code goest here:
-CODE_HERE
+#5. With your list of numbers from above, use a for loop to 
+#   find the average of the numbers. 
 
 
+#6. The code below has errors, please fix it. 
+#   It should output the letters of the alphabet (one per line)
+#   and the number of letters in the alphabet (without just printing the number 26).
+#   It should print the number of letters ONLY ONCE.
+my_abcs = ['a','b','c','d','e','f','g','h','i','j','k','l','m',n,'o','p','q','r','s','t','u','v','w','x','y','z']
+for letter in my_abcs
+    print(letter)
+    print(len(my_abcs))
 
-#Fourth, sort the name list in alphabetical order. 
-#You do not have to print the sorted list,
-#only sort it.
-#Your code goes here:
-CODE_HERE
+#BONUS: Below are two lists, each ten items long. Use a 'for' loop to create a list of tuples
+#       in which the first item in each tuple is from list1 and the second in each tuple is
+#       from list2. 
 
-
-
-#Fifth, make a new loop that will use the names in the (now sorted)
-#name list. Each iteration of this loop should ask the user for the
-#particular student's grade. This grade should be appended to the
-#grade list. 
-#Your code goes here:
-CODE_HERE
-
-
-
-
-#Sixth, complete the code below to report to the user the number of
-#entries in the name list and the number of entries in the grade
-#list. Also tell the user the minimum and maximum grade.
-#Complete the code below:
-print('There are ', CODE_HERE, ' names \
-\n and ', CODE_HERE, ' grades.')
-
-print('The maximum grade is ', CODE_HERE, ', \
-\n and the minimum grade is ', CODE_HERE, '.')
-
-
-
-#Seventh, calculate the average grade, store it in a variable,
-#and tell the user what the average is.
-#Your code goes here:
-CODE_HERE
-
-
-
-#Eighth, using slices, calculate the average of the first three
-#students in the list, store it in a variable, and tell the user. 
-#Your code goes here:
-CODE_HERE
-
-
-
-#Ninth, calculate the average of the last three students in the list.
-#Store this in a variable. Tell the user.
-#Your code goes here:
-CODE_HERE
-
-
-
-#Tenth, calculate the average of the 4th, 5th, and 6th students,
-#store it in a variable, and tell the user. 
-#Your code goes here: 
-CODE_HERE
-
-
-
-#BONUS: Create a LIST of TUPLES. Each tuple should have the form
-#(student_name, student_grade). Then, use a 'for' loop to print
-#each tuple so that the teacher has a printout of each student
-#and their grade side-by-side.
-#Your code goes here:
+list1 = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel']
+list2 = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians']
