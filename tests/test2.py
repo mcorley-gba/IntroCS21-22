@@ -4,10 +4,14 @@
 #1. Define a list with ten names in it. 
 
 
+
+
 #2. Create a 'for' loop that will loop through each name in your list
 #   Each iteration should print a message saying that the person 
 #   is a good student.
 #   Example output: Joe is a good student. 
+
+
 
 
 
@@ -19,6 +23,9 @@
 #   e. Print your modified, sorted list.
 
 
+
+
+
 #4. MULTIPLE CHOICE: Un-Comment the line of code below that will 
 #   create a list of numbers from 1 to 20:
 #numbers = range(1,21)          #OPTION A
@@ -27,8 +34,14 @@
 #numbers = list(range(1,21))    #OPTION D
 
 
+
+
+
 #5. With your list of numbers from above, use a for loop to 
 #   find the average of the numbers. 
+
+
+
 
 
 #6. The code below has errors, please fix it. 
@@ -39,6 +52,9 @@ my_abcs = ['a','b','c','d','e','f','g','h','i','j','k','l','m',n,'o','p','q','r'
 for letter in my_abcs
     print(letter)
     print(len(my_abcs))
+
+
+
 
 #BONUS: Below are two lists, each ten items long. Use a 'for' loop to create a list of tuples
 #       in which the first item in each tuple is from list1 and the second in each tuple is
