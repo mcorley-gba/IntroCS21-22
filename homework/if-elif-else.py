@@ -19,3 +19,23 @@
 #       the person is an elder.
 
 #Write your code below:
+
+#age = 1 #If time, come back and change to user input.
+age = eval(input("How old are you?\n")) #56
+
+#if conditional_test:
+if age < 2:
+    print("You are a baby!")
+elif age < 4: #elif = else if
+    print("You are a toddler!")
+elif age < 13:
+    print("You are a kid!")
+elif age < 20:
+    print("You are a teenager!")
+elif age < 65:
+    print("You are an adult!")
+else: #Else is a catch-all if every previous if test fails.
+    print("You are an elder!")
+
+if sports = "y":
+    print("You play sports!")
