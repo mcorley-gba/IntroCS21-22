@@ -16,17 +16,21 @@ print("Finished making pizza!") #Outside the if-statement AND the loop
 print("\n\n\n\n\n")
 
 #Mutliple Lists:
-available_toppings = ["mushrooms", "olives", "pepperoni", \
-    "3-meat", "pineapple", "extra cheese"]
+
 
 requested_toppings = []
-num_toppings = eval(input("How many toppings do you want on your pizza?\n"))
+""" num_toppings = eval(input("How many toppings do you want on your pizza?\n"))
 if num_toppings > 0:
     for topping in range(num_toppings):
         requested_topping = input("What topping would you like?\n")
         requested_toppings.append(requested_topping)
 else: 
     requested_toppings = []
+ """
+available_toppings = ["mushrooms", "olives", "pepperoni", \
+    "3-meat", "pineapple", "extra cheese"]
+
+requested_toppings = ["mushrooms", "sausage", "pepperoni", "extra cheese"]
 
 if requested_toppings: #If requested_toppings is NOT empty
     for requested_topping in requested_toppings: #for item in list:
@@ -40,3 +44,9 @@ else:  #Catches if there's nothing in the list of requested toppings
     print("Are you sure you want no toppings?")
 
 print("Finished making your pizza!")
+
+#Conditional Tests
+#==, Are two things equal?
+#!=, Are two things not equal?
+#<, <=
+#>. >=
