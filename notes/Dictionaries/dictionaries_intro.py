@@ -50,6 +50,7 @@ if alien_0['speed'] == 'slow':
 elif alien_0['speed'] == 'medium':
     x_increment = 2
 else:
+#elif alien_0['speed'] == 'fast':
     x_increment = 3
 
 #Update position to show movement:
@@ -57,3 +58,43 @@ else:
 alien_0['x_position'] += x_increment
 
 print(f"New position: {alien_0['x_position']}")
+
+print('\n\n\n\n\n\n\n\n\n\n\n')
+
+#Deleting Key-Value Pairs (Ex: 'Color':Green; General: Key:Value)
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+
+#Dictionaries of Similar Items:
+#So far, our dictionaries have been different pieces of info about ONE object (e.g. alien_0)
+#We can also use dictionaries to store "one" piece of info about SEVERAL objects
+
+favorite_classes = {
+    'Ty'        : 'Computer Science',
+    'Noah J'    :'PE',
+    'Ryder'     :'Math',
+    'Kameron'   :'Spanish',
+    'Collin'    :'Chemistry',
+    'Ramsey'    :'Strength and Fitness',
+    'Doug'      :'Math',
+    'Noah L'    :'Computer Science',
+    'Logan'     :'Bible',
+    'MaKenna'   :'Biology'}
+
+favorite_class = favorite_classes['Logan'].title()
+print(f"Logan's favorite class is {favorite_class}.")
+
+print('\n\n\n\n\n\n\n\n\n')
+
+#Accessing Values:
+#What if the key we want doesn't exist?
+#print(favorite_classes['Dr. Corley'])
+
+#Use Python's .get() method:
+print(favorite_classes.get('Dr. Corley', 'No entry for Dr. Corley'))
+
+# my_dictionary.get(key_i_want, message_if_it_doesnt_exit)
+
