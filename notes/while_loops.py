@@ -92,3 +92,9 @@ while current_number > 1:
     current_number += 1
 
 print(current_number)
+
+
+#CLASSWORK:
+#Write a while loop that will prompt a user to enter a series of pizza toppings until
+#they enter a 'quit' statement. As they enter EACH topping print a message 
+#saying you will add the topping to the pizza.
