@@ -60,14 +60,35 @@ message_count = 0
 prompt2 = "\nEnter a city you would like to visit: "
 prompt2 += "\n(Enter 'quit' when you are finished.) "
 
-while True: #This loop will run forever.
+""" while True: #This loop will run forever.
     city = input(prompt2) #Get city name from user.
 
     if city.lower() == 'quit': #If the user wants to quit
         break #break jumps out of a loop and returns to the next level up of indentation
     else:
         print(f"I hear {city.title()} is nice to visit.")
-
+ """
 #'break' can be used in ANY python loop. (Even for loops.)
 
+print('\n\n\n\n\n\n\n')
+
 #Tomorrow: using 'continue', then classwork
+#Sometimes we don't want to totally break out of a loop.
+#Sometimes we just want to skip one or a few iterations
+#'continue' command helps do this:
+
+current_number = 0
+#Make a while loop that will print only the odd numbers:
+while current_number < 10:
+    current_number += 1 #exit condition -- counter
+    if current_number%2 == 0: #Check if the current_number is even (0 remainder)
+        continue #terminates the current loop-cycle and restarts the loop.
+
+    print(current_number)
+
+#Beware of infinite loops! Especially loops with little to no output.
+while current_number > 1:
+    #print(current_number)
+    current_number += 1
+
+print(current_number)
