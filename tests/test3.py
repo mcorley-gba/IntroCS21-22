@@ -1,4 +1,4 @@
-#Test 3 - FINAL TEST -- Fall 2021
+#Intro CS -- Test 3, Version 1 -- Fall 2021
 #You must work two of the following three questions.
 #If you correctly solve all three, I will replace 
 #your lowest classwork score with a 100. If you don't

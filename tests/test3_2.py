@@ -1,4 +1,4 @@
-#Intro CS -- Test 3 -- Version 2
+#Intro CS -- Test 3, Version 2 -- Fall 2021
 
 #For this version of the test, you will be making two functions:
 #my_prod and my_square. 
