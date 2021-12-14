@@ -1,4 +1,6 @@
-#For this version of the final, you will be making two functions:
+#Intro CS -- Test 3 -- Version 2
+
+#For this version of the test, you will be making two functions:
 #my_prod and my_square. 
 
 #my_prod should take two integers as parameters
