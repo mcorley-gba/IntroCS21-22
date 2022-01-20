@@ -37,4 +37,3 @@ amigos.describe_restaurant()
 mcdonalds = Restaurant("McDonald's", "American")
 mcdonalds.describe_restaurant()
 mcdonalds.open_restaurant()
-# !=
