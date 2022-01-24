@@ -39,7 +39,35 @@ class Car:
             #self.odometer_reading = self.odometer_reading+miles
         else:
             print("You cannot roll back an odometer. That's illegal!")
-            
+
+    def fill_gas_tank(self):
+        """Function to simulate putting gas in your Car."""
+        print("The car is now full of gas.")
+
+#Instances as Attributes:
+#Often, as programs grow, classes contain more and more attributes
+#Further, you will find that you can take some attributes and 
+#isolate them as a totally new class, to improve readability and
+#portability.
+
+class Battery:
+    """A simple model of a battery for an elec. car."""
+    def __init__(self, battery_size=75):
+        """Initialize attributes for battery."""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Print a statement about the range of the battery"""
+        if self.battery_size == 75:
+            range=260
+        elif self.battery_size == 100:
+            range = 315
+        
+        print(f"This car can go about {range} miles with a full charge.")
 
 class ElectricCar(Car):
     #Tells python to have the electric cars inherits all the attributes and methods
@@ -49,15 +77,31 @@ class ElectricCar(Car):
         """Initialize basic attributes from parent class"""
         super().__init__(make, model, year)
         #super() calls a method from the parent class (in this case, Car)
+        self.my_battery = Battery() 
+        #We added a battery attribute to the ElectricCar class
+        #by creating an instance of the Battery class
 
+    #Override methods from the parent class.
+    #Simplest way is to re-define the function within the child class
+    def fill_gas_tank(self):
+        """Electric cars don't use gas."""
+        print("This car doesn't need gas!")
 
 my_car = Car("Toyota", "FJ Cruiser", 2018)
 print(my_car.get_descriptive_name())
-
+#my_car.describe_battery()
+my_car.fill_gas_tank()
+print('\n')
 my_electric_car = ElectricCar("tesla", "model s", 2019)
 print(my_electric_car.get_descriptive_name())
+#my_electric_car.describe_battery() <-- this won't work because
+                                    #ElectricCar no longer has this
+                                    #method
+my_electric_car.my_battery.describe_battery()
+my_electric_car.my_battery.get_range()
+my_electric_car.fill_gas_tank()
 
-
+"""
 #We need to modify the odometer_reading attribute for my_car
 #Don't do that in the class itself. We can modify from the main body
 #of our script
@@ -79,3 +123,4 @@ my_car.read_odometer()
 
 my_car.increment_odometer(-1000)
 my_car.read_odometer()
+"""
