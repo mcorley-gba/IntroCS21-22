@@ -1,5 +1,5 @@
 #In this classwork, you will create a class for users of a computer
-#and work with attributes and inheritance. There are problems.
+#and work with attributes and inheritance. There are 4 problems.
 
 #Problem 1: 
 #   a) Create a class called 'User'. Create two attributes: 'first_name'
