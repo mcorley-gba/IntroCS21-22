@@ -21,5 +21,50 @@
 
 
 #Problem 2:
-#   a) Add an attribute to you 'User' class called 'login_attempts'.
-#   b) Write a method called 'increment_
+#   a) Add an attribute to you 'User' class called 'login_attempts'. 
+#       The default value for this should be 0
+#   b) Write a method called 'increment_login_attempts()' that will 
+#       increment the value of 'login_attempts' by 1 each time.
+#   c) Write another method in your 'User' class called
+#       'reset_login_attempts()' that will reset the 'login_attempts'
+#       attribute back to zero.
+#   d) Make an instance of 'User' and call 'increment_login_attempts()'
+#       several times. Print the 'login_attempts' data. Then call
+#       'reset_login_attempts' once. Print the 'login_attempts'
+#       data again to make sure it is zero.
+#YOUR CODE GOES HERE.
+
+
+
+
+
+
+
+
+#Problem 3: 
+#   a) Write a class called 'Admin' that inherits from the 'User' class.
+#   b) Add an attribute called privileges, that stores a list of 
+#       strings describing what the admin user can do. For example:
+#       "can add post", "can delete post", "can ban user", etc.
+#   c) Write a method called 'show_privileges()' that will
+#       print the list of administrator privileges.
+#   d) Create an instance of 'Admin' anc call this method.
+#YOUR CODE GOES HERE
+
+
+
+
+
+
+
+
+
+
+#Problem 4:
+#   a) Write a separate Privileges class. This class should have one attribute:
+#       'privileges' which should store the same  list as in Problem 3.
+#   b) Move the 'show_privileges()' method from 'Admin' to 'Privileges'.
+#   c) Add a 'privileges' attribute to your 'Admin' class by 
+#       creating an instance of the Privileges class.
+#   d) Create an instance of 'Admin' and call the 'show_privileges()' method.
+#YOUR CODE GOES HERE
