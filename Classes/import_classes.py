@@ -25,7 +25,8 @@ new_electric_car.battery.get_range()
 #SHOULD all be related.
 
 #We can import more than one class from a module:
-from car_class import Car, ElectricCar
+from car_class import Car
+from car_class import ElectricCar
 my_vw_bug = Car('vw', 'bettle', 2005)
 my_vw_bug.get_descriptive_name()
 
@@ -41,3 +42,7 @@ my_truck.get_descriptive_name()
 #Finally, we can avoid the 'car_class.' notation by using
 from car_class import *
 #SHOULD BE AVOIDED IF AT ALL POSSIBLE 
+
+#Using Aliases
+from car_class import ElectricCar as EC
+
