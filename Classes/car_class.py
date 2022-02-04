@@ -4,6 +4,12 @@ class Car:
 
     def __init__(self, make, model, year):
         """Initialize attributes"""
+        #Everything defined in the __init__ is an attribute
+        #We can differentiate between:
+        #   1. User-Provided: The attributes in the __init__ parameter list (e.g., make model year)
+        #   2. Pre-defined/default attributes: Attributes defined in __init__ by the developer
+        #       e.g., odometer_reading
+        #Takeaway - Not every attribute must be listed in the __init__ parameter list.
         self.make = make
         self.model = model
         self.year = year
