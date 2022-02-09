@@ -36,4 +36,11 @@
 #    b)Create a restaurant and call the describe_restaurant() method on it.
 #    c)Create an ice cream stand and call the flavors_today() method.
 #
+#
+#BONUS POINTS AVAILABLE:
+#   a) Good programming practices (i.e., doc-strings, etc.)
+#   b) Add a method to IceCreamStand called 'add_flavor(...)' 
+#       that takes a flavor as a parameter and adds it to the 
+#       available_flavors list.
+#
 #YOU MUST SUBMIT 2 PYTHON FILES FOR THIS TEST.
