@@ -1,4 +1,4 @@
-#Problem 1:
+#PROBLEM 1:
 #Make a class called Restaurant. This class should have the following features:
 #    a)The __init__() method for this class should take in two parameters
 #      (other than 'self') -- restaurant_name and cuisine_type -- and store
@@ -15,7 +15,7 @@
 #      number_served attribute by 1 each time it is called.
 #
 #
-#Problem 2:
+#PROBLEM 2:
 #Create a class called IceCreamStand that is a child of Restaurant.
 #    a)Initialize IceCreamStand using the super().__init__() call.
 #    b)Create a new class called IceCreamFlavors that has the following
@@ -30,7 +30,7 @@
 #      IceCreamFlavors class.
 #
 #
-#Problem 3:
+#PROBLEM 3:
 #Create a separate python script.
 #    a)Import the three classes you have created.
 #    b)Create a restaurant and call the describe_restaurant() method on it.
@@ -40,3 +40,4 @@
 #
 #
 #You must submit 2 python files for this test.
+
