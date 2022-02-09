@@ -18,7 +18,7 @@
 #PROBLEM 2:
 #Create a class called IceCreamStand that is a child of Restaurant.
 #    a)Initialize IceCreamStand using the super().__init__() call.
-#    b)Create a new class called IceCreamFlavors that has the following
+#    b)Create a new class (separate from IceCreamStand) called IceCreamFlavors that has the following
 #      features.
 #        1)Stores a list of three available flavors as an attribute in the
 #          __init__() method. NOTE: The list should be a python list and it 
