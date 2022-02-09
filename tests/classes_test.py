@@ -36,8 +36,4 @@
 #    b)Create a restaurant and call the describe_restaurant() method on it.
 #    c)Create an ice cream stand and call the flavors_today() method.
 #
-#
-#
-#
-#You must submit 2 python files for this test.
-
+#YOU MUST SUBMIT 2 PYTHON FILES FOR THIS TEST.
