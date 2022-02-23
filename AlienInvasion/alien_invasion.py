@@ -5,6 +5,8 @@ import sys #Gives more control for system resources (e.g., windowing)
 
 import pygame
 
+from settings import Settings
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior"""
 
@@ -13,8 +15,14 @@ class AlienInvasion:
         pygame.init() #Initializes background settings that 
                         #Pygame needs to do its job(s)
 
-        self.screen = pygame.display.set_mode((1200,800))
-            #Creates a window for the game at 1200 pixels by 800 pixels
+        self.settings = Settings()
+            #Pulls in the settings from the "Settings"
+            # class. So they are accessible from the main file
+
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_width, self.settings.screen_height)
+        )
+
         pygame.display.set_caption("Alien Invasion")
             #Creating a caption at the top of the new window
 
@@ -30,6 +38,10 @@ class AlienInvasion:
                     #this loop.
                 if event.type == pygame.QUIT:
                     sys.exit()
+
+            self.screen.fill(self.settings.bg_color)
+                #Redraw the screen with correct bg color each loop
+
             #Make the game screen visible
             pygame.display.flip()
 
