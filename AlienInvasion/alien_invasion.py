@@ -6,6 +6,7 @@ import sys #Gives more control for system resources (e.g., windowing)
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior"""
@@ -25,6 +26,10 @@ class AlienInvasion:
 
         pygame.display.set_caption("Alien Invasion")
             #Creating a caption at the top of the new window
+        
+        self.ship = Ship(self)
+            #Create a ship attribute for the game by instantiating
+            #   the ship class.
 
     def run_game(self):
         """Start the main loop for the game."""
@@ -41,6 +46,8 @@ class AlienInvasion:
 
             self.screen.fill(self.settings.bg_color)
                 #Redraw the screen with correct bg color each loop
+            self.ship.blitme() 
+                #draw the ship in the game instance
 
             #Make the game screen visible
             pygame.display.flip()
