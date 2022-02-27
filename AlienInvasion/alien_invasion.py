@@ -34,23 +34,41 @@ class AlienInvasion:
     def run_game(self):
         """Start the main loop for the game."""
         while True:
-            #Tell pygame to watch for keyboard and mouse events
-            for event in pygame.event.get():
-                    #pygame.event.get() is a function that
-                    #returns a list of any key/mouse events that
-                    #have taken place
-                    #Any keypresses or mouse-clicks will initiate
-                    #this loop.
-                if event.type == pygame.QUIT:
-                    sys.exit()
+            self._check_events()
+            self.ship.update()
+            self._update_screen()
 
-            self.screen.fill(self.settings.bg_color)
-                #Redraw the screen with correct bg color each loop
-            self.ship.blitme() 
-                #draw the ship in the game instance
+        
+    def _check_events(self):
+        """Respond to keypresses and mouse clicks"""
+        #Tell pygame to watch for keyboard and mouse events
+        for event in pygame.event.get():
+                #pygame.event.get() is a function that
+                #returns a list of any key/mouse events that
+                #have taken place
+                #Any keypresses or mouse-clicks will initiate
+                #this loop.
+            if event.type == pygame.QUIT:
+                sys.exit()
+            elif event.type == pygame.KEYDOWN: #Check if a key was pressed
+                if event.key == pygame.K_RIGHT: #If key was right arrow, then...
+                    #Move the ship right
+                    self.ship.moving_right = True
+            elif event.type == pygame.KEYUP: #Check if a key has been release
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right = False
+    
+    def _update_screen(self):
+        """Update images on the screen, show(flip) new screen"""
+        self.screen.fill(self.settings.bg_color)
+            #Redraw the screen with correct bg color each loop
+        self.ship.blitme() 
+            #draw the ship in the game instance
 
-            #Make the game screen visible
-            pygame.display.flip()
+        #Make the game screen visible
+        pygame.display.flip()
+
+
 
 if __name__ == '__main__':
     #Make a game instance, and run the game
