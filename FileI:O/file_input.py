@@ -1,4 +1,4 @@
-#File Input.py
+'''#File Input.py
 #We will experiment with file inputs here.
 
 #Saved in pi_digits.txt is the first 30 decimal places of pi.
@@ -72,7 +72,7 @@ print(len(pi_string))
 
 #When python read text tiles all the data is read as string data. Convert using int(), eval(), or float()
 
-#Reading Large Data Files
+#Reading Large Data Files'''
 
 file_path = 'data_files/pi_million_digits.txt'
 with open(file_path) as file_object:
@@ -88,7 +88,7 @@ print(len(pi_string))
 #Is your birthday in pi
 birthday = input("Enter your birthday in the form mmddyy: ")
 if birthday in pi_string:
-    print("Your birthday appear in the first million decimal points of pi!")
+    print("Your birthday appears in the first million decimal points of pi!")
 else:
     print("Your birthday does not appear in the first million decimal points of pi.")
         
