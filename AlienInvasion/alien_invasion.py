@@ -40,8 +40,16 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self.bullets.update()
-            self._update_screen()
 
+            #Check to see if bullets are off the screen.
+            #If yes, delete them.
+            for bullet in self.bullets.copy():
+                if bullet.rect.bottom <= 0:
+                    #y-value less than zero = off top of screen
+                    self.bullets.remove(bullet)
+            print(len(self.bullets)) #will comment out later
+            
+            self._update_screen()
         
     def _check_events(self):
         """Respond to keypresses and mouse clicks"""
@@ -82,8 +90,9 @@ class AlienInvasion:
     def _fire_bullet(self):
         """Create a new bullet and add it to the 
             Bullet Sprite Group."""
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+        if len(self.bullets) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
     
     def _update_screen(self):
         """Update images on the screen, show(flip) new screen"""
