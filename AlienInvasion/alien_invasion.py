@@ -1,7 +1,7 @@
 #alien_invasion.py -- make a new folder called AlienInvasion 
 # in IntroCS
 
-import sys #Gives more control for system resources (e.g., windowing)
+import sys  # Gives more control for system resources (e.g., windowing)
 
 import pygame
 
@@ -9,13 +9,14 @@ from settings import Settings
 from ship import Ship
 from bullet import Bullet
 
+
 class AlienInvasion:
-    """Overall class to manage game assets and behavior"""
+    """Overall class to manage game assets and behavior."""
 
     def __init__(self):
-        """Initialize the game, and create all game resources"""
-        pygame.init() #Initializes background settings that 
-                        #Pygame needs to do its job(s)
+        """Initialize the game, and create all game resources."""
+        pygame.init()  # Initializes background settings that 
+                       # Pygame needs to do its job(s)
 
         self.settings = Settings()
             #Pulls in the settings from the "Settings"
