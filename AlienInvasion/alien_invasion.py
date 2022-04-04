@@ -1,5 +1,8 @@
-#alien_invasion.py -- make a new folder called AlienInvasion 
-# in IntroCS
+"""
+alien_invasion.py --.
+
+ make a new folder called AlienInvasion in IntroCS.
+"""
 
 import sys  # Gives more control for system resources (e.g., windowing)
 
@@ -15,19 +18,21 @@ class AlienInvasion:
 
     def __init__(self):
         """Initialize the game, and create all game resources."""
-        pygame.init()  # Initializes background settings that 
-                       # Pygame needs to do its job(s)
+        pygame.init()
+        # Initializes background settings that
+        # Pygame needs to do its job(s)
 
         self.settings = Settings()
-            #Pulls in the settings from the "Settings"
-            # class. So they are accessible from the main file
+        # Pulls in the settings from the "Settings"
+        # class. So they are accessible from the main file
 
         self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
 
         pygame.display.set_caption("Alien Invasion")
-            #Creating a caption at the top of the new window
+        #Creating a caption at the top of the new window
+        
         
         self.ship = Ship(self)
             #Create a ship attribute for the game by instantiating
