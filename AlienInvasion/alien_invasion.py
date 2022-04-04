@@ -36,7 +36,7 @@ class AlienInvasion:
         
         self.ship = Ship(self)
             #Create a ship attribute for the game by instantiating
-            #   the ship class.
+            #   the ship class   .
         
         self.bullets = pygame.sprite.Group()
 
