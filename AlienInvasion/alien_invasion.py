@@ -50,6 +50,7 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self.bullets.update()
+            self._update_aliens()
 
             #Check to see if bullets are off the screen.
             #If yes, delete them.
@@ -60,6 +61,10 @@ class AlienInvasion:
             print(len(self.bullets)) #will comment out later
             
             self._update_screen()
+
+    def _update_aliens(self):
+        """Update the position of all aliens in the fleet"""
+        self.aliens.update()
         
     def _check_events(self):
         """Respond to keypresses and mouse clicks"""
@@ -145,6 +150,19 @@ class AlienInvasion:
         alien.rect.x = alien.x
         alien.rect.y = alien_height + (2*alien.rect.height*row_number)
         self.aliens.add(alien)
+
+    def _check_fleet_edges(self):
+        """Respond appropriately if any aliens have reached an edge"""
+        for alien in self.aliens.sprites():
+            if alien.check_edges():
+                self._change_fleet_direction()
+                break
+
+    def _change_fleet_direction(self):
+        """Drop the fleet, then move the other direction horizontally."""
+        for alien in self.aliens.sprites():
+            alien.rect.y += self.settings.fleet_drop_speed
+        self.settings.fleet_direction *= -1 
 
 
 
