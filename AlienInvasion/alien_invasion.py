@@ -63,7 +63,9 @@ class AlienInvasion:
             self._update_screen()
 
     def _update_aliens(self):
-        """Update the position of all aliens in the fleet"""
+        """Check if the fleet is at an edge
+            Then update all alien positions accordingly."""
+        self._check_fleet_edges()
         self.aliens.update()
         
     def _check_events(self):
