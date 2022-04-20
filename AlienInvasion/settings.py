@@ -20,7 +20,7 @@ class Settings:
         self.bullets_allowed = 5
 
         #Alien Settings
-        self.alien_speed = 1.0
-        self.fleet_drop_speed = 10
+        self.alien_speed = 10.0
+        self.fleet_drop_speed = 50
         self.fleet_direction = 1 #1=right; -1=left
         #Adding fleet_direction*fleet_speed will automatically move l/r
