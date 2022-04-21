@@ -29,20 +29,20 @@ class AlienInvasion:
         # Pulls in the settings from the "Settings"
         # class. So they are accessible from the main file
 
-        self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
 
         pygame.display.set_caption("Alien Invasion")
-        #Creating a caption at the top of the new window
+        # Creating a caption at the top of the new window
 
-        #Initialize stats:
+        # Initialize stats:
         self.stats = GameStats(self)
-        
+
         self.ship = Ship(self)
-            #Create a ship attribute for the game by instantiating
-            #   the ship class   .
-        
+        # Create a ship attribute for the game by instantiating
+        # the ship class   .
+
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
 
