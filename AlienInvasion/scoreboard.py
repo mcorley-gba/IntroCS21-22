@@ -1,12 +1,14 @@
 #scoreboard.py
-
 import pygame.font
+from pygame.sprite import Group
+from ship import Ship
 
 class Scoreboard:
     """A class to record and display scoring info"""
 
     def __init__(self, ai_game):
         """Initialize scorekeeping attributes"""
+        self.ai_game = ai_game
         self.screen = ai_game.screen
         self.screen_rect = self.screen.get_rect()
         self.settings = ai_game.settings
@@ -19,6 +21,7 @@ class Scoreboard:
         #Prepare initial score image
         self.prep_score()
         self.prep_high_score()
+        self.prep_ships()
 
     def prep_score(self):
         """Turns the score into an image"""
@@ -50,7 +53,21 @@ class Scoreboard:
             self.stats.high_score = self.stats.score
             self.prep_high_score()
 
+    def prep_ships(self): 
+        """Show How many lives remain using ship image"""
+        self.ships = Group()
+        for ship_number in range(self.stats.ships_left):
+            ship = Ship(self.ai_game)
+            ship.rect.x = self.screen_rect.width/2 + \
+                    ship_number * ship.rect.width \
+                    - (ship.rect.width * self.stats.ships_left)/2
+            ship.rect.y = 10
+            self.ships.add(ship)
+
+
     def show_score(self):
         """Draw the score to the screen"""
         self.screen.blit(self.score_image,self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
+        self.ships.draw(self.screen)
+
