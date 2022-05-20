@@ -1,0 +1,124 @@
+% Created 2022-05-19 Thu 23:51
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Michael Corley}
+\date{\today}
+\title{Python File I/O Review}
+\hypersetup{
+ pdfauthor={Michael Corley},
+ pdftitle={Python File I/O Review},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Opening Files for Reading Data:}
+\label{sec:org4d82707}
+\texttt{python} has the ability to open and close files containing data (usually text data) for
+reading and writing. The key to opening a file (for reading or writing) is the use of the
+\texttt{with} and \texttt{open} commands:
+
+\begin{verbatim}
+with open(`my_file.txt') as file_object:
+\end{verbatim}
+
+Above, the \texttt{open(`my\_file.txt')} command tells \texttt{python} to access the file \texttt{my\_file.txt}
+(Note that it is given as a string: between ` and '). The \texttt{with ... as file\_object} associates
+the newly opened file with the \texttt{python} object \texttt{file\_object} on which \texttt{python} can operate.
+The \texttt{:} at the end begins a block of code with instructions on what to do with the data in the
+file just like beginning an \texttt{if}-block, a \texttt{for} loop, or a \texttt{while} loop.
+
+\subsection{Reading All Data at Once}
+\label{sec:org9f83ab5}
+After opening a file an associating it with a \texttt{python} object, we can do work on the contents
+of the file. The easiest thing to do is to read the entire contents of the file as one
+giant string using the following code:
+
+\begin{verbatim}
+with open(`my_file.txt') as file_object:
+    contents = file_object.read()
+\end{verbatim}
+
+Calling the \texttt{.read()} method on a file object in \texttt{python} takes all of the content of the file
+and stores it in a string (in this example, the string variable with name \texttt{contents}.
+
+IMPORTANT: Recall that your data file must be in the same directory (folder) as your \texttt{python}
+script. If it is not, then you must use the absolute filepath to open the file.
+
+\subsection{Reading Data Line-by-Line}
+\label{sec:org819d477}
+We can also read data from a file line by line, rather than all in one fell swoop. This is
+accomplished by using a nested \texttt{for} lkoop within the \texttt{open} block:
+
+\begin{verbatim}
+with open(`my_file.txt') as file_object:
+    for line in file_object:
+	 print(line.rstrip())
+\end{verbatim}
+
+In the above snippet, the file is opened and associated with a \texttt{python} object, then a
+\texttt{for} loop is started. When a \texttt{for} loop is started over the contents of a file, \texttt{python}
+looks for the unseen newline character to tell it when to start a new loop iteration. By
+using newline characters as restart signals for the loop, \texttt{python} can store each line of
+data individually.
+
+Beware, however, when you use \texttt{print(line)}, \texttt{python} prints the line including newline
+characters. Calling \texttt{print(line.rstrip())} as above will take away that newline character
+so that the data is displayed in the same format as it was written and viewed at first.
+
+\section{Writing Data To a File}
+\label{sec:orgada096c}
+Now, we can talk about how to have data written into a file for permanent storage.
+
+\subsection{Writing to an Empty File}
+\label{sec:org59720b5}
+To write data to a file that is empty (or possibly doesn't exist), we must again call open:
+
+\begin{verbatim}
+file_name = `my_file.txt'
+
+with open(filename, `w') as file_object:
+    file_object.write(``I love programming!'')
+\end{verbatim}
+
+In the above snippet, the \texttt{`w'} argument of \texttt{open} tells \texttt{python} that we need write access to
+the data file. If we wanted to write more than one line, we must be aware that python will put all
+of our write statements on one line unless we explicitly end them with the newline character: \texttt{\textbackslash{}n}.
+
+\subsection{Appending to an EXISTING FILE:}
+\label{sec:org7d3fdbf}
+When you call \texttt{open} with 'w', \texttt{python} will erase whatever is in the file when you write to it. This
+is fine if you want to erase the data. If you want to keep the data in the file and not change it, you
+must append it:
+
+\begin{verbatim}
+file_name = my_file
+
+with open(file_name, 'a') as file_object:
+   file_name.append("Tuesdays and Thursdays are good days")
+   file_name.append("Mondays and Wednesdays are not so good.")
+#Do Somethinge Here
+
+\end{verbatim}
+
+That's all you need (and a bit more) to get working and finished on the bonus assignment for Sideways Shooter.
+There is more we can say about file I/O in \texttt{python}, but we'll save that for another time.
+\end{document}
