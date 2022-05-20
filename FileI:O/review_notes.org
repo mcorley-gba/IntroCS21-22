@@ -1,34 +1,34 @@
 #+Title: Python File I/O Review
 
 * Opening Files for Reading Data:
-  ~python~ has the ability to open and close files containing data (usually text data) for
+  python has the ability to open and close files containing data (usually text data) for
   reading and writing. The key to opening a file (for reading or writing) is the use of the
   ~with~ and ~open~ commands:
 
   #+BEGIN_SRC python 
-  with open(`my_file.txt') as file_object:
+  with open('my_file.txt') as file_object:
   #+END_SRC
 
-  Above, the ~open(`my_file.txt')~ command tells ~python~ to access the file =my_file.txt=
-  (Note that it is given as a string: between ` and '). The ~with ... as file_object~ associates
-  the newly opened file with the ~python~ object ~file_object~ on which ~python~ can operate.
+  Above, the ~open('my_file.txt')~ command tells python to access the file =my_file.txt=
+  (Note that it is given as a string: between ' and '). The ~with ... as file_object~ associates
+  the newly opened file with the python object ~file_object~ on which ~python~ can operate.
   The ~:~ at the end begins a block of code with instructions on what to do with the data in the
   file just like beginning an ~if~-block, a ~for~ loop, or a ~while~ loop.
 
 ** Reading All Data at Once
-  After opening a file an associating it with a ~python~ object, we can do work on the contents
+  After opening a file an associating it with a python object, we can do work on the contents
   of the file. The easiest thing to do is to read the entire contents of the file as one
   giant string using the following code:
 
   #+BEGIN_SRC python
-  with open(`my_file.txt') as file_object:
+  with open('my_file.txt') as file_object:
       contents = file_object.read()
   #+END_SRC
 
-  Calling the ~.read()~ method on a file object in ~python~ takes all of the content of the file
+  Calling the ~.read()~ method on a file object in python takes all of the content of the file
   and stores it in a string (in this example, the string variable with name =contents=.
 
-  IMPORTANT: Recall that your data file must be in the same directory (folder) as your ~python~
+  IMPORTANT: Recall that your data file must be in the same directory (folder) as your python
   script. If it is not, then you must use the absolute filepath to open the file.
 
 ** Reading Data Line-by-Line
@@ -36,18 +36,18 @@
    accomplished by using a nested =for= lkoop within the =open= block:
 
    #+BEGIN_SRC python
-   with open(`my_file.txt') as file_object:
+   with open('my_file.txt') as file_object:
        for line in file_object:
             print(line.rstrip())
    #+END_SRC
 
-   In the above snippet, the file is opened and associated with a ~python~ object, then a
-   =for= loop is started. When a =for= loop is started over the contents of a file, ~python~
+   In the above snippet, the file is opened and associated with a python object, then a
+   =for= loop is started. When a =for= loop is started over the contents of a file, python
    looks for the unseen newline character to tell it when to start a new loop iteration. By
-   using newline characters as restart signals for the loop, ~python~ can store each line of
+   using newline characters as restart signals for the loop, python can store each line of
    data individually.
 
-   Beware, however, when you use =print(line)=, ~python~ prints the line including newline
+   Beware, however, when you use =print(line)=, python prints the line including newline
    characters. Calling =print(line.rstrip())= as above will take away that newline character
    so that the data is displayed in the same format as it was written and viewed at first.
 
@@ -69,8 +69,8 @@
    of our write statements on one line unless we explicitly end them with the newline character: =\n=.
 
 ** Appending to an EXISTING FILE:
-   When you call =open= with 'w', ~python~ will erase whatever is in the file when you write to it. This
-   is fine if you want to erase the data. If you want to keep the data in the file and not change it, you
+   When you call =open= with 'w', python will erase whatever is in the file when you write to it. This
+   is fine if you want to erase the old data. If you want to keep the data in the file and not change it, you
    must append it:
 
    #+begin_src python
